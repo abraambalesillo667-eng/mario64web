@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Mario 64 · Fan Site</title>
+  <meta name="description" content="Un homenaje a Super Mario 64: la historia, los mundos, los sombreros y las 120 estrellas que definieron el 3D. Fan site moderno, visual e interactivo.">
+  <meta name="theme-color" content="#F7F3EB">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Super Mario 64 · Fan Site">
+  <meta property="og:description" content="La historia, los mundos, los sombreros y las 120 estrellas que definieron el 3D. Con 5 estrellas ocultas que encontrar.">
+  <meta property="og:image" content="assets/img/hero-castle.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/outfit-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 2.2l2.9 6.05 6.65.9-4.85 4.65 1.2 6.6L12 17.2 6.1 20.4l1.2-6.6L2.45 9.15l6.65-.9L12 2.2z"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24">
+      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+      <path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"/>
+    </symbol>
+    <symbol id="icon-up" viewBox="0 0 24 24">
+      <path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio" aria-label="Super Mario 64 fan site, ir al inicio">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#icon-star"/></svg></span>
+        <span class="brand-text"><strong>M64</strong><small>Fan site</small></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Secciones">
+        <a href="#historia">Historia</a>
+        <a href="#mundos">Mundos</a>
+        <a href="#sombreros">Sombreros</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#curiosidades">Curiosidades</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="star-pill" id="starPill" aria-label="Estrellas encontradas: 0 de 5">
+          <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          <span id="starCount">0</span><span class="star-total">/5</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow" data-reveal><span class="dot"></span> Fan site · Nintendo 64 · 1996</span>
+          <h1 data-reveal style="--d:.05s">
+            <span class="line">Super</span>
+            <span class="line">Mario <em class="accent">64</em><svg class="title-star" aria-hidden="true"><use href="#icon-star"/></svg></span>
+          </h1>
+          <p class="hero-lead" data-reveal style="--d:.1s">
+            El juego que nos enseñó a saltar en tres dimensiones. Un recorrido por el
+            castillo, sus mundos y las 120 estrellas que definieron una generación.
+          </p>
+          <div class="hero-cta" data-reveal style="--d:.15s">
+            <a class="btn btn-primary" href="#mundos">
+              <svg aria-hidden="true"><use href="#icon-star"/></svg>
+              Explorar los mundos
+            </a>
+            <a class="btn btn-ghost" href="#historia">
+              Ver la historia
+              <svg aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </a>
+          </div>
+          <dl class="hero-stats" data-reveal style="--d:.2s">
+            <div><dt>1996</dt><dd>Lanzamiento</dd></div>
+            <div><dt><span data-count="120">120</span></dt><dd>Estrellas</dd></div>
+            <div><dt><span data-count="15">15</span></dt><dd>Mundos</dd></div>
+            <div><dt>1</dt><dd>Revolución</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-art" data-reveal style="--d:.12s">
+          <div class="hero-art-frame">
+            <img src="assets/img/hero-castle.jpg" alt="Castillo de cuento flotando entre nubes con un arcoíris de fondo" width="1376" height="768" fetchpriority="high">
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon"><svg aria-hidden="true"><use href="#icon-star"/></svg></span>
+            <span><strong>120 estrellas</strong><small>te esperan en el castillo</small></span>
+          </div>
+          <button class="star-pickup sp-1" data-star="1" aria-label="Estrella oculta 1 de 5">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </button>
+          <svg class="hero-spark s1" aria-hidden="true"><use href="#icon-star"/></svg>
+          <svg class="hero-spark s2" aria-hidden="true"><use href="#icon-star"/></svg>
+          <svg class="hero-spark s3" aria-hidden="true"><use href="#icon-star"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Super Mario 64</span><svg><use href="#icon-star"/></svg>
+          <span>120 estrellas</span><svg><use href="#icon-star"/></svg>
+          <span>Nintendo 64</span><svg><use href="#icon-star"/></svg>
+          <span>1996</span><svg><use href="#icon-star"/></svg>
+          <span>El castillo te espera</span><svg><use href="#icon-star"/></svg>
+        </div>
+        <div class="marquee-group">
+          <span>Super Mario 64</span><svg><use href="#icon-star"/></svg>
+          <span>120 estrellas</span><svg><use href="#icon-star"/></svg>
+          <span>Nintendo 64</span><svg><use href="#icon-star"/></svg>
+          <span>1996</span><svg><use href="#icon-star"/></svg>
+          <span>El castillo te espera</span><svg><use href="#icon-star"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ HISTORIA ============ -->
+    <section class="section" id="historia">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-label"><span>01</span> Historia</p>
+          <h2>El salto que lo cambió todo</h2>
+          <p class="section-sub">En 1996, Nintendo no lanzó un juego en 3D: lanzó el manual de cómo se hace uno.</p>
+        </div>
+
+        <div class="history-grid">
+          <div class="history-copy" data-reveal>
+            <p class="lead-big">Super Mario 64 no llegó al 3D: lo fundó. Nintendo convirtió la tercera dimensión en un patio de juegos y enseñó a toda una industria a mirar hacia arriba.</p>
+            <p>Dirigido por Shigeru Miyamoto y desarrollado por Nintendo EAD, el juego puso a Mario en un castillo repleto de cuadros que eran, en realidad, puertas a otros mundos. La cámara se volvió un personaje más; el stick analógico, una extensión de la mano.</p>
+            <p>Con 120 Estrellas de Poder repartidas por cada rincón, cada salto era una pregunta y cada pared, una posible respuesta. El resultado: uno de los juegos más influyentes jamás hechos.</p>
+            <div class="fact-card">
+              <p class="fact-title">Ficha técnica</p>
+              <dl>
+                <div><dt>Desarrollador</dt><dd>Nintendo EAD</dd></div>
+                <div><dt>Dirección</dt><dd>Shigeru Miyamoto</dd></div>
+                <div><dt>Plataforma</dt><dd>Nintendo 64</dd></div>
+                <div><dt>Estrellas</dt><dd>120</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="timeline" data-reveal style="--d:.1s">
+            <div class="timeline-item">
+              <span class="tl-year">1996</span>
+              <h3>El lanzamiento</h3>
+              <p>Llega a Japón el 23 de junio y a América en septiembre, junto al Nintendo 64. El 3D ya no volvería a ser el mismo.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="tl-year">2004</span>
+              <h3>El remake</h3>
+              <p>Super Mario 64 DS trae a Luigi, Yoshi y Wario al castillo y añade 30 estrellas nuevas.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="tl-year">2020</span>
+              <h3>El regreso</h3>
+              <p>Super Mario 3D All-Stars lo recupera para una nueva generación, con su magia intacta.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="tl-year">Hoy</span>
+              <h3>La leyenda</h3>
+              <p>Se sigue jugando, analizando y corriendo en speedruns. El castillo nunca cierra.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <figure class="pullquote" data-reveal>
+          <svg class="pq-star" aria-hidden="true"><use href="#icon-star"/></svg>
+          <blockquote>No era un nivel en 3D. Era un mundo entero esperando a que lo rompieras.</blockquote>
+          <figcaption>La sensación que quedaba al quitar el cartucho</figcaption>
+          <button class="star-pickup sp-2" data-star="2" aria-label="Estrella oculta 2 de 5">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ MUNDOS ============ -->
+    <section class="section section-alt" id="mundos">
+      <div class="container">
+        <div class="section-head row-head" data-reveal>
+          <div>
+            <p class="section-label"><span>02</span> Mundos</p>
+            <h2>Cada curso, una pequeña obsesión</h2>
+          </div>
+          <p class="section-sub">Praderas, desiertos, bahías y lava. Seis de los cursos que todavía recordamos de memoria.</p>
+        </div>
+
+        <div class="worlds-grid">
+          <article class="world-card" data-reveal>
+            <div class="world-media">
+              <img src="assets/img/world-bobomb.jpg" alt="Campo de batalla verde con una montaña, un puente de madera y cañones" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">01</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Bob-omb Battlefield</h3>
+              <p>Cañones, un puente de madera y un rey bomba que nunca aprende a rendirse.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 01</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="world-card" data-reveal style="--d:.06s">
+            <div class="world-media">
+              <img src="assets/img/world-whomp.jpg" alt="Desierto dorado con bloques de piedra gigantes y una pirámide escalonada" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">02</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Whomp's Kingdom</h3>
+              <p>Bloques gigantes, un desierto dorado y la fortaleza del Rey Whomp.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 02</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="world-card" data-reveal style="--d:.12s">
+            <div class="world-media">
+              <img src="assets/img/world-jolly.jpg" alt="Bahía turquesa con un galeón pirata hundido y acantilados rocosos" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">03</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Jolly Roger Bay</h3>
+              <p>Un galeón hundido, anguilas de mal humor y una cueva llena de tesoros.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 03</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="world-card" data-reveal>
+            <div class="world-media">
+              <img src="assets/img/world-cool.jpg" alt="Pueblo de montaña nevado con una cabaña de madera, tobogán de nieve y pinos" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">04</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Cool Cool Mountain</h3>
+              <p>Un pueblo nevado, un pingüino con prisa y la montaña rusa de hielo más traicionera.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 04</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="world-card" data-reveal style="--d:.06s">
+            <div class="world-media">
+              <img src="assets/img/world-lava.jpg" alt="Mundo volcánico con plataformas de piedra oscura flotando sobre lava naranja" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">05</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Lethal Lava Land</h3>
+              <p>Plataformas flotando sobre lava y un volcán que no perdona los errores.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 05</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="world-card" data-reveal style="--d:.12s">
+            <div class="world-media">
+              <img src="assets/img/world-cave.jpg" alt="Cueva subterránea con lago, muelles de madera y cristales brillantes" width="1376" height="768" loading="lazy" decoding="async">
+              <span class="world-num">06</span>
+              <span class="world-tag"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+            </div>
+            <div class="world-body">
+              <h3>Hazy Maze Cave</h3>
+              <p>Un lago subterráneo, niebla espesa y el laberinto más oscuro del castillo.</p>
+              <div class="world-meta">
+                <span class="stars"><svg aria-hidden="true"><use href="#icon-star"/></svg> 7 estrellas</span>
+                <span>Curso 06</span>
+              </div>
+            </div>
+          </article>
+
+          <button class="star-pickup sp-3" data-star="3" aria-label="Estrella oculta 3 de 5">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOMBREROS ============ -->
+    <section class="section section-dark" id="sombreros">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-label"><span>03</span> Sombreros</p>
+          <h2>Tres sombreros para romper las reglas</h2>
+          <p class="section-sub">Cada sombrero abría una puerta que antes no existía. Y las Estrellas de Poder, 120 razones para volver a entrar.</p>
+        </div>
+
+        <div class="caps-grid">
+          <article class="cap-card" data-reveal>
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M11 33C3 27 2 16 7 11c3 4 7 7 14 8l-2 12-8 2z" fill="#F7F3EB"/>
+                <path d="M53 33c8-6 9-17 4-22-3 4-7 7-14 8l2 12 8 2z" fill="#F7F3EB"/>
+                <path d="M32 9c-10 0-18 8-19 20l-1 5h40l-1-5C50 17 42 9 32 9z" fill="#E5342B"/>
+                <path d="M10 34h44c4 0 7 2.5 7 6s-3 6-7 6H10c-4 0-7-2.5-7-6s3-6 7-6z" fill="#C42A22"/>
+                <path d="M32 17l2 4.2 4.6.6-3.3 3.2.8 4.6L32 27.4l-4.1 2.2.8-4.6-3.3-3.2 4.6-.6L32 17z" fill="#fff"/>
+              </svg>
+            </div>
+            <span class="cap-tag">Vuelo</span>
+            <h3>Wing Cap</h3>
+            <p>Un triple salto y el cielo deja de ser un límite. Las alas te llevan donde el salto no alcanza.</p>
+          </article>
+
+          <article class="cap-card" data-reveal style="--d:.06s">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <defs>
+                  <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#F2F4F8"/>
+                    <stop offset=".45" stop-color="#B9C2D0"/>
+                    <stop offset="1" stop-color="#7E8A9E"/>
+                  </linearGradient>
+                </defs>
+                <path d="M32 9c-10 0-18 8-19 20l-1 5h40l-1-5C50 17 42 9 32 9z" fill="url(#metalGrad)"/>
+                <path d="M10 34h44c4 0 7 2.5 7 6s-3 6-7 6H10c-4 0-7-2.5-7-6s3-6 7-6z" fill="#6B7789"/>
+                <path d="M22 14c4-2 8-3 12-2" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7" fill="none"/>
+                <circle cx="32" cy="24" r="7" fill="#fff" opacity=".9"/>
+              </svg>
+            </div>
+            <span class="cap-tag">Invencible</span>
+            <h3>Metal Cap</h3>
+            <p>Acero puro. Camina bajo el agua, rompe enemigos y olvídate del peligro.</p>
+          </article>
+
+          <article class="cap-card" data-reveal style="--d:.12s">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 9c-10 0-18 8-19 20l-1 5h40l-1-5C50 17 42 9 32 9z" fill="#5B8DEF" opacity=".35" stroke="#9CC0FF" stroke-width="2" stroke-dasharray="5 4"/>
+                <path d="M10 34h44c4 0 7 2.5 7 6s-3 6-7 6H10c-4 0-7-2.5-7-6s3-6 7-6z" fill="#2F5BEA" opacity=".3" stroke="#9CC0FF" stroke-width="2" stroke-dasharray="5 4"/>
+                <circle cx="32" cy="24" r="7" fill="#fff" opacity=".7"/>
+              </svg>
+            </div>
+            <span class="cap-tag">Fantasma</span>
+            <h3>Vanish Cap</h3>
+            <p>Atraviesa muros, desvanece tu cuerpo y aparece donde nadie te espera.</p>
+          </article>
+
+          <article class="cap-card cap-card-star" data-reveal style="--d:.18s">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 6l7.2 14.6 16.1 2.3-11.6 11.3 2.7 16L32 42.6 17.6 50.2l2.7-16L8.7 22.9l16.1-2.3L32 6z" fill="#FFC531" stroke="#C98A00" stroke-width="1.5"/>
+                <circle cx="32" cy="30" r="3.5" fill="#FFF3D0"/>
+              </svg>
+            </div>
+            <span class="cap-tag">120</span>
+            <h3>Power Star</h3>
+            <p>La moneda del castillo. Cada estrella abre una puerta; todas juntas, el final.</p>
+          </article>
+
+          <button class="star-pickup sp-4" data-star="4" aria-label="Estrella oculta 4 de 5">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PERSONAJES ============ -->
+    <section class="section" id="personajes">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-label"><span>04</span> Personajes</p>
+          <h2>Los que hacen del castillo un hogar</h2>
+          <p class="section-sub">Tres razones por las que cada vuelta al castillo se siente como volver a casa.</p>
+        </div>
+
+        <div class="chars-grid">
+          <article class="char-card" data-reveal>
+            <div class="char-media">
+              <img src="assets/img/char-mario.jpg" alt="Retrato estilo figura de Mario con gorra roja y overol azul" width="1408" height="768" loading="lazy" decoding="async">
+            </div>
+            <div class="char-body">
+              <div class="char-top"><h3>Mario</h3><span class="role role-red">Héroe</span></div>
+              <p>El que salta, nada, vuela y nunca suelta una estrella. Si hay un techo, Mario ya está pensando cómo subir.</p>
+            </div>
+          </article>
+
+          <article class="char-card" data-reveal style="--d:.06s">
+            <div class="char-media">
+              <img src="assets/img/char-peach.jpg" alt="Retrato estilo figura de la princesa Peach con corona dorada y vestido rosa" width="1408" height="768" loading="lazy" decoding="async">
+            </div>
+            <div class="char-body">
+              <div class="char-top"><h3>Peach</h3><span class="role role-pink">Princesa</span></div>
+              <p>La invitación que empieza todo. Su castillo es el mapa y su voz, la brújula que guía a Mario.</p>
+            </div>
+          </article>
+
+          <article class="char-card" data-reveal style="--d:.12s">
+            <div class="char-media">
+              <img src="assets/img/char-bowser.jpg" alt="Retrato estilo figura de Bowser con cuernos, caparazón con picos y expresión traviesa" width="1408" height="768" loading="lazy" decoding="async">
+            </div>
+            <div class="char-body">
+              <div class="char-top"><h3>Bowser</h3><span class="role role-green">Villano</span></div>
+              <p>Secuestra princesas, ruge más fuerte de lo que golpea y siempre, siempre vuelve.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CURIOSIDADES ============ -->
+    <section class="section section-alt" id="curiosidades">
+      <div class="container trivia-grid">
+        <div class="trivia-head" data-reveal>
+          <p class="section-label"><span>05</span> Curiosidades</p>
+          <h2>Datos que suenan a leyenda</h2>
+          <p class="section-sub">Rumores, trucos y detalles que se volvieron parte del mito.</p>
+          <div class="trivia-note">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+            <span>Todo lo que cuentas aquí se ha contado durante décadas en patios de escuela. La mayor parte es verdad.</span>
+          </div>
+          <button class="star-pickup sp-5" data-star="5" aria-label="Estrella oculta 5 de 5">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </button>
+        </div>
+
+        <div class="accordion" data-reveal style="--d:.08s">
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc1">
+              <span class="acc-num">01</span>
+              <span class="acc-title">La voz que cambió a Mario</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc1">
+              <div class="acc-inner"><p>Charles Martinet puso voz a Mario y convirtió «It's-a me, Mario!» en una de las frases más reconocibles de la historia de los videojuegos.</p></div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc2">
+              <span class="acc-num">02</span>
+              <span class="acc-title">L is real 2401</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc2">
+              <div class="acc-inner"><p>En el patio del castillo hay una placa con esa inscripción. Durante años alimentó la teoría de que Luigi estaba escondido en el juego. Sigue siendo un misterio.</p></div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc3">
+              <span class="acc-num">03</span>
+              <span class="acc-title">La escalera infinita</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc3">
+              <div class="acc-inner"><p>Si no tienes suficientes estrellas, la escalera final se repite para siempre. Con 70 estrellas, el hechizo se rompe.</p></div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc4">
+              <span class="acc-num">04</span>
+              <span class="acc-title">El stick que lo cambió todo</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc4">
+              <div class="acc-inner"><p>Super Mario 64 fue el juego que justificó el stick analógico del Nintendo 64. Antes, moverse en 3D era un acto de fe.</p></div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc5">
+              <span class="acc-num">05</span>
+              <span class="acc-title">120 estrellas, cero mapas</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc5">
+              <div class="acc-inner"><p>No hay mapa: el castillo funciona como hub y cada cuadro es un mundo. Perderse era parte del plan.</p></div>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="acc6">
+              <span class="acc-num">06</span>
+              <span class="acc-title">El BLJ, el truco que rompió el juego</span>
+              <span class="acc-icon"><svg aria-hidden="true"><use href="#icon-plus"/></svg></span>
+            </button>
+            <div class="acc-body" id="acc6">
+              <div class="acc-inner"><p>El backwards long jump dispara la velocidad de Mario y permite saltarse enormes partes del juego. Los speedrunners lo convirtieron en arte.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BÚSQUEDA ============ -->
+    <section class="section cta-section" id="estrellas">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <img class="cta-bg" src="assets/img/hero-castle.jpg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          <div class="cta-overlay"></div>
+          <div class="cta-content">
+            <span class="cta-kicker"><svg aria-hidden="true"><use href="#icon-star"/></svg> La búsqueda</span>
+            <h2>Hay 5 estrellas escondidas en esta página</h2>
+            <p>Mira bien: brillan en los rincones menos esperados. Haz clic en ellas y suma las cinco. Cuando termines, el castillo te lo va a agradecer.</p>
+            <div class="progress" id="starProgress" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" aria-label="Estrellas encontradas">
+              <div class="progress-bar"><span id="progressFill"></span></div>
+              <span id="progressText">0 / 5</span>
+            </div>
+            <button class="btn btn-yellow" id="hintBtn">
+              <svg aria-hidden="true"><use href="#icon-sparkle"/></svg>
+              <span id="hintBtnText">Iluminar las pistas</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio" aria-label="Volver al inicio">
+          <span class="brand-mark"><svg aria-hidden="true"><use href="#icon-star"/></svg></span>
+          <span class="brand-text"><strong>M64</strong><small>Fan site</small></span>
+        </a>
+        <p>Un homenaje hecho por fans, para fans. Todo el arte de este sitio es original y fue creado para el proyecto.</p>
+      </div>
+      <nav class="footer-links" aria-label="Secciones del pie">
+        <a href="#historia">Historia</a>
+        <a href="#mundos">Mundos</a>
+        <a href="#sombreros">Sombreros</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#curiosidades">Curiosidades</a>
+      </nav>
+      <a class="back-top" href="#inicio">Volver arriba <svg aria-hidden="true"><use href="#icon-up"/></svg></a>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Super Mario 64 Fan Site · Proyecto no oficial y sin ánimo de lucro.</p>
+      <p>Super Mario 64 y sus personajes son marcas de Nintendo. Hecho con 120 estrellas.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
